@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+    
+    
+    <script>window.jQuery = window.$ = require('jquery');</script>
+    <script type="text/javascript" src="./bootstrap.min.js"></script>
+    <script type="text/javascript" src="./popper.min.js"></script>
+    <script src="linkers/drift_detector.js"></script>
+    
+    
+    <title>Drift Detector V1.0</title>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Drift Detector</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Welcome to the Drift Detector App. This App is free and it is currently in a beta stage.</p>
+      </div>
+    </div>
+    <div class="row">
+      <form>
+      <div class="col-md-12" style="padding: 10px;">
+        <label for="formControlOpenFile">Open file</label>
+        <input type="file" class="form-control-file" id="formControlOpenFile">
+      </div>
+      <div class="col-md-12" style="padding: 10px;">
+        <label for="selectLanguage">Select a Language</label>
+        <select class="browser-default form-control" id="selectLanguage">
+          <option selected>--None--</option>
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+        </select>
+      </div>
+      <div class="col-md-12" style="padding: 10px;">
+        <lable for="windowsSelect">Windows</label>
+        <select class="browser-default form-control" id="windowsSelect">
+          <option selected>--None--</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="col-md-12" style="padding: 10px;">
+        <lable for="keywordsSelect">Keywords</label>
+        <select class="browser-default form-control" id="keywordsSelect">
+          <option selected>--None--</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="col col-md-6" style="padding: 10px;">
+          <button class="btn btn-secondary">Reset</button>
+        </div>
+        <div class="col col-md-6" style="padding: 10px;">
+          <button class="btn btn-primary" type="button" onclick="detect_drift()" href="">Analyze</button>
+        </div>
+      </div>
+      <div class="row">
+        <p id="texto"><p>
+      </div>
+    </div>
+  </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
